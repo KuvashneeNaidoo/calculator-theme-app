@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Theme App</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="calculator" class="container">
+      <div class="header">
+        <h2>calc</h2>
+        <div id="theme-slider-container">
+          <span class="theme-label">THEME</span>
+          <div class="theme-toggle">
+            <div class="theme-numbers">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <input type="range" id="themeSlider" min="1" max="3" step="1" />
+          </div>
+        </div>
+      </div>
+      <input type="text" id="display" readonly />
+      <div id="keys">
+        <!-- 
+        Add the user's input to the calculators display to update the input field 
+        The value inside parentheses is passed as the input parameter to the appendToDisplay function 
+        -->
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <!-- Delete one character at a time, or clears if error or undefined -->
+        <button onclick="deleteFromDisplay('DEL')" class="delete-btn">
+          DEL
+        </button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('+')">+</button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('*')">x</button>
+
+        <!-- An empty string will clear the display when the clearDisplay function is called -->
+        <button onclick="clearDisplay()" class="reset-btn">RESET</button>
+
+        <!-- The calculation will be performed when the calculate function is called -->
+        <button onclick="calculate()" class="equals-btn">=</button>
+      </div>
+    </div>
+    <script src="calculations.js"></script>
+    <script src="themeSlider.js"></script>
+  </body>
+</html>

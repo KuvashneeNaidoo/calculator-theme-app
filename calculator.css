@@ -1,0 +1,196 @@
+/* Global styles */
+* {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Header - "calc" and theme toggle */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+/* Title "CALC" */
+h2 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--calc-title-color);
+  margin-top: 10px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  height: 60px;
+  background-color: var(--key-bg-color);
+  color: var(--key-text);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 5px var(--key-shadow);
+  border: none;
+}
+
+button:hover {
+  filter: brightness(1.5);
+}
+
+.reset-btn,
+.equals-btn {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.reset-btn,
+.delete-btn,
+.equals-btn {
+  font-weight: bold;
+  color: white;
+}
+
+.reset-btn {
+  background-color: var(--reset-btn-bg);
+  box-shadow: 0px 5px var(--reset-btn-shadow);
+}
+
+.delete-btn {
+  background-color: var(--delete-btn-bg);
+  box-shadow: 0px 5px var(--delete-btn-shadow);
+}
+
+.equals-btn {
+  background-color: var(--equals-btn-bg);
+  box-shadow: 0px 5px var(--equals-btn-shadow);
+}
+
+/* Key grid layout */
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 30px;
+  border-radius: 2%;
+  background-color: var(--toggle-bg);
+}
+
+/* Display input */
+#display {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  text-align: right;
+  background-color: var(--screen-bg);
+  border-radius: 10px;
+  color: var(--display-text);
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* "THEME" text alignment */
+#theme-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* "THEME" font styling */
+.theme-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--toggle-text-color);
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+/* "THEME" numbers */
+.theme-numbers span {
+  font-size: 12px;
+  color: var(--theme-number-color);
+}
+
+.theme-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+/* Toggle slider */
+#themeSlider {
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--toggle-bg);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-top: 0;
+}
+
+/* Toggle slider thumb for webkit browsers - Chrome, Safari, Edge, Opera */
+#themeSlider::-webkit-slider-thumb {
+  background-color: var(--slider-thumb-color);
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+#themeSlider::-moz-range-thumb {
+  background-color: var(--slider-thumb-color);
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsiveness: Media Queries */
+/* Small Screens */
+@media (max-width: 600px) {
+  #keys {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+  }
+}
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+  #keys {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 25px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+  #keys {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px;
+  }
+}
