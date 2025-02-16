@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/KuvashneeNaidoo/calculator-theme-app)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://calculator-theme-app-kuvashnee.netlify.app/)
 
 ## My process
 
