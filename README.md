@@ -27,7 +27,17 @@ Users should be able to:
 
 ### Screenshot
 
+Large Screen (Desktop) 
+
 ![calculator-theme-app](https://github.com/user-attachments/assets/5e901766-18a8-471f-b72d-d796be5006a2)
+
+Medium Screen (iPad)
+
+![calculator-theme-app-medium-screens](https://github.com/user-attachments/assets/1eb3eb9e-006c-4365-89fb-672fd914ad73)
+
+Small Screen (Mobile)
+
+![calculator-theme-app-small-screens](https://github.com/user-attachments/assets/0f9cffc0-60e1-48d1-98b7-bd49a0b3f83b)
 
 ### Links
 
